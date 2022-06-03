@@ -3,18 +3,18 @@ import VueRouter from 'vue-router'
 
 import HeroView from '../views/HeroView'
 import OurCoffeeView from '../views/OurCoffeeView'
-import ForYourPleasure from '../views/ForYourPleasure'
-import ContactUs from '../views/ContactUs'
-import ThankYouPage from '../views/ThankYouPage'
+import ForYourPleasureView from '../views/ForYourPleasureView'
+import ContactUsView from '../views/ContactUsView'
+import ThankYouView from '../views/ThankYouView'
 
 Vue.use(VueRouter)
 
 const routes = [
     { path: '/', component: HeroView },
     { path: '/our-coffee', component: OurCoffeeView },
-    { path: '/for-your-pleasure', component: ForYourPleasure },
-    { path: '/contact-us', component: ContactUs },
-    { path: '/thank-you-page', component: ThankYouPage }
+    { path: '/for-your-pleasure', component: ForYourPleasureView },
+    { path: '/contact-us', component: ContactUsView },
+    { path: '/thank-you', component: ThankYouView }
 ]
 
 const router = new VueRouter({
