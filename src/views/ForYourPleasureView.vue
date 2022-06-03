@@ -48,12 +48,42 @@
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
             <div class="shop__wrapper">
-              <product-card />
-              <product-card />
-              <product-card />
-              <product-card />
-              <product-card />
-              <product-card />
+              <product-card
+                classItem="shop__item"
+                :name="goods[0].name"
+                :price="goods[0].price"
+                :image="goods[0].image"
+              />
+              <product-card
+                classItem="shop__item"
+                :name="goods[1].name"
+                :price="goods[1].price"
+                :image="goods[1].image"
+              />
+              <product-card
+                classItem="shop__item"
+                :name="goods[2].name"
+                :price="goods[2].price"
+                :image="goods[2].image"
+              />
+              <product-card
+                classItem="shop__item"
+                :name="goods[3].name"
+                :price="goods[3].price"
+                :image="goods[3].image"
+              />
+              <product-card
+                classItem="shop__item"
+                :name="goods[4].name"
+                :price="goods[4].price"
+                :image="goods[4].image"
+              />
+              <product-card
+                classItem="shop__item"
+                :name="goods[5].name"
+                :price="goods[5].price"
+                :image="goods[5].image"
+              />
             </div>
           </div>
         </div>
@@ -69,58 +99,48 @@ export default {
   components: { NavBarComponent, ProductCard },
   data() {
     return {
-      productCard: [
+      goods: [
         {
           id: 0,
-          img: "good-1.jpg",
-          alt: "coffee",
-          title: "Solimo Coffee Beans 2kg",
+          image: "good-1.jpg",
+          name: "Solimo Coffee Beans 2kg",
           country: "Brazil",
-          price: "10.73$",
-          classItem: "shop__item",
-          classItemTitle: "shop__item-title",
-          classItemCountry: "shop__item-country",
-          classItemPrice: "shop__item-price",
+          price: 10.73,
         },
         {
           id: 1,
-          img: "good-1.jpg",
-          alt: "coffee",
-          title: "Presto Coffee Beans 1kg",
+          image: "good-1.jpg",
+          name: "Presto Coffee Beans 1kg",
           country: "Brazil",
-          price: "15.99$",
+          price: 15.99,
         },
         {
           id: 2,
-          img: "good-1.jpg",
-          alt: "coffee",
-          title: "AROMISTICO Coffee 1kg",
+          image: "good-1.jpg",
+          name: "AROMISTICO Coffee 1kg",
           country: "Brazil",
-          price: "6.99$",
+          price: 6.99,
         },
         {
           id: 3,
-          img: "good-1.jpg",
-          alt: "coffee",
-          title: "Solimo Coffee Beans 2kg",
+          image: "good-1.jpg",
+          name: "Solimo Coffee Beans 2kg",
           country: "Brazil",
-          price: "10.73$",
+          price: 10.73,
         },
         {
           id: 4,
-          img: "good-1.jpg",
-          alt: "coffee",
-          title: "Solimo Coffee Beans 2kg",
+          image: "good-1.jpg",
+          name: "Solimo Coffee Beans 2kg",
           country: "Brazil",
-          price: "10.73$",
+          price: 10.73,
         },
         {
           id: 5,
-          img: "good-1.jpg",
-          alt: "coffee",
-          title: "Solimo Coffee Beans 2kg",
+          image: "good-1.jpg",
+          name: "Solimo Coffee Beans 2kg",
           country: "Brazil",
-          price: "10.73$",
+          price: 10.73,
         },
       ],
     };

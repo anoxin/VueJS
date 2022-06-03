@@ -59,9 +59,24 @@
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
             <div class="best__wrapper">
-              <product-card />
-              <product-card />
-              <product-card />
+              <product-card
+                classItem="best__item"
+                :name="bestsellers[0].name"
+                :price="bestsellers[0].price"
+                :image="bestsellers[0].image"
+              />
+              <product-card
+                classItem="best__item"
+                :name="bestsellers[1].name"
+                :price="bestsellers[1].price"
+                :image="bestsellers[1].image"
+              />
+              <product-card
+                classItem="best__item"
+                :name="bestsellers[2].name"
+                :price="bestsellers[2].price"
+                :image="bestsellers[2].image"
+              />
             </div>
           </div>
         </div>
@@ -77,34 +92,27 @@ export default {
   components: { NavBarComponent, ProductCard },
   data() {
     return {
-      productCard: [
+      bestsellers: [
         {
           id: 0,
-          img: "coffee-1.jpg",
-          alt: "coffee",
-          title: "Solimo Coffee Beans 2kg",
+          image: "coffee-1.jpg",
+          name: "Solimo Coffee Beans 2kg",
           country: "Brazil",
-          price: "10.73$",
-          classItem: "best__item",
-          classItemTitle: "best__item-title",
-          classItemCountry: "best__item-country",
-          classItemPrice: "best__item-price",
+          price: 10.73,
         },
         {
           id: 1,
-          img: "coffee-2.jpg",
-          alt: "coffee",
-          title: "Presto Coffee Beans 1kg",
+          image: "coffee-2.jpg",
+          name: "Presto Coffee Beans 1kg",
           country: "Brazil",
-          price: "15.99$",
+          price: 15.99,
         },
         {
           id: 2,
-          img: "coffee-3.jpg",
-          alt: "coffee",
-          title: "AROMISTICO Coffee 1kg",
+          image: "coffee-3.jpg",
+          name: "AROMISTICO Coffee 1kg",
           country: "Brazil",
-          price: "6.99$",
+          price: 6.99,
         },
       ],
     };
