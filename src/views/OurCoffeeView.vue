@@ -70,12 +70,12 @@
           <div class="col-lg-10 offset-lg-1">
             <div class="shop__wrapper">
               <product-card
-                v-for="ourCoffee in coffee"
-                :key="ourCoffee.id"
+                v-for="card in coffee"
+                :key="card.id"
                 classItem="shop__item"
-                :name="ourCoffee.name"
-                :price="ourCoffee.price"
-                :image="ourCoffee.image"
+                :name="card.name"
+                :price="card.price"
+                :image="card.image"
               />
             </div>
           </div>
