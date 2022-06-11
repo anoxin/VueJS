@@ -31,7 +31,7 @@
                 </div>
                 <div class="col col-12 col-sm-9">
                   <input
-                    v-model="form.text"
+                    v-model="form.name"
                     type="text"
                     class="form-control"
                     id="name-input"
@@ -62,7 +62,7 @@
                 </div>
                 <div class="col col-12 col-sm-9">
                   <input
-                    v-model="form.tel"
+                    v-model="form.phone"
                     type="tel"
                     class="form-control"
                     id="phone-input"
@@ -110,18 +110,16 @@ export default {
   data() {
     return {
       form: {
-        text: "",
+        name: "",
         email: "",
-        tel: "",
+        phone: "",
         message: "",
       },
     };
   },
   methods: {
     submit(event) {
-      Array.prototype.forEach.call(event.target.elements, (elem) => {
-        console.log(elem.value);
-      });
+      console.log(this.form);
     },
   },
   components: { NavBarComponent },
