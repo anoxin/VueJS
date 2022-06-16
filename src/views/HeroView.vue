@@ -81,13 +81,11 @@
 <script>
 import NavBarComponent from "@/components/NavBarComponent.vue";
 import ProductCard from "@/components/ProductCard.vue";
-import { v4 as uuidv4 } from "uuid";
 import { scrollIntoView } from "seamless-scroll-polyfill";
 export default {
   components: { NavBarComponent, ProductCard },
   computed: {
     images() {
-      console.log(this.$store.getters["getBestSellersImage"]);
       return this.$store.getters["getBestSellersImage"];
     },
   },
