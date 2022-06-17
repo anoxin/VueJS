@@ -27,7 +27,8 @@ const routes = [{
         component: ContactUsView
     },
     {
-        path: '/thank-you',
+        name: 'thankYou',
+        path: '/thank-you/:username',
         component: ThankYouView
     },
     {

@@ -167,12 +167,27 @@ export default {
     async submit(event) {
       const isFormCorrect = await this.v$.$validate();
       if (!isFormCorrect) return;
-      console.log({
+      const message = {
         name: this.name,
         email: this.email,
         phone: this.phone,
         message: this.message,
         checkbox: this.checkbox,
+      };
+      fetch("http://localhost:3000/contacts", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(message),
+      }).then((data) => {
+        // console.log(data);
+        this.name = "";
+        this.email = "";
+        this.phone = "";
+        this.message = "";
+        this.v$.$reset();
+        this.$router.push({ name: "thankYou" });
       });
     },
   },

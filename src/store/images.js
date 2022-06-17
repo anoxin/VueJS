@@ -1,117 +1,36 @@
-import {
-  v4 as uuidv4
-} from "uuid";
-
 const images = {
   state: {
-    bestSellers: [{
-        id: uuidv4(),
-        image: "coffee-1.jpg",
-        name: "Solimo Coffee Beans 2kg",
-        country: "Brazil",
-        price: 10.73,
-      },
-      {
-        id: uuidv4(),
-        image: "coffee-2.jpg",
-        name: "Presto Coffee Beans 1kg",
-        country: "Brazil",
-        price: 15.99,
-      },
-      {
-        id: uuidv4(),
-        image: "coffee-3.jpg",
-        name: "AROMISTICO Coffee 1kg",
-        country: "Brazil",
-        price: 6.99,
-      },
-    ],
-    goods: [{
-        id: uuidv4(),
-        image: "good-1.jpg",
-        name: "Solimo Coffee Beans 2kg",
-        country: "Brazil",
-        price: 10.73,
-      },
-      {
-        id: uuidv4(),
-        image: "good-1.jpg",
-        name: "Presto Coffee Beans 1kg",
-        country: "Brazil",
-        price: 15.99,
-      },
-      {
-        id: uuidv4(),
-        image: "good-1.jpg",
-        name: "AROMISTICO Coffee 1kg",
-        country: "Brazil",
-        price: 6.99,
-      },
-      {
-        id: uuidv4(),
-        image: "good-1.jpg",
-        name: "Solimo Coffee Beans 2kg",
-        country: "Brazil",
-        price: 10.73,
-      },
-      {
-        id: uuidv4(),
-        image: "good-1.jpg",
-        name: "Solimo Coffee Beans 2kg",
-        country: "Brazil",
-        price: 10.73,
-      },
-      {
-        id: uuidv4(),
-        image: "good-1.jpg",
-        name: "Solimo Coffee Beans 2kg",
-        country: "Brazil",
-        price: 10.73,
-      },
-    ],
-    coffee: [{
-        id: uuidv4(),
-        image: "coffee-3.jpg",
-        name: "Solimo Coffee Beans 2kg",
-        country: "Brazil",
-        price: 10.73,
-      },
-      {
-        id: uuidv4(),
-        image: "coffee-3.jpg",
-        name: "Presto Coffee Beans 1kg",
-        country: "Brazil",
-        price: 15.99,
-      },
-      {
-        id: uuidv4(),
-        image: "coffee-3.jpg",
-        name: "AROMISTICO Coffee 1kg",
-        country: "Brazil",
-        price: 6.99,
-      },
-      {
-        id: uuidv4(),
-        image: "coffee-3.jpg",
-        name: "Solimo Coffee Beans 2kg",
-        country: "Brazil",
-        price: 10.73,
-      },
-      {
-        id: uuidv4(),
-        image: "coffee-3.jpg",
-        name: "Solimo Coffee Beans 2kg",
-        country: "Brazil",
-        price: 10.73,
-      },
-      {
-        id: uuidv4(),
-        image: "coffee-3.jpg",
-        name: "Solimo Coffee Beans 2kg",
-        country: "Brazil",
-        price: 10.73,
-      },
-    ],
+    bestSellers: [],
+    goods: [],
+    coffee: [],
+  },
+  mutations: {
+    setCoffeeData(state, data) {
+      state.coffee = data
+    },
+    setGoodsData(state, data) {
+      state.goods = data
+    },
+    setBestSellersData(state, data) {
+      state.bestSellers = data
+    }
+  },
+  actions: {
+    setCoffeeData({
+      commit
+    }, data) {
+      commit('setCoffeeData', data)
+    },
+    setGoodsData({
+      commit
+    }, data) {
+      commit('setGoodsData', data)
+    },
+    setBestSellersData({
+      commit
+    }, data) {
+      commit('setBestSellersData', data)
+    }
   },
   getters: {
     getBestSellersImage(state) {
