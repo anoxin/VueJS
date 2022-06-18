@@ -3,6 +3,8 @@ const images = {
     bestSellers: [],
     goods: [],
     coffee: [],
+    searchValue: "",
+    sortValue: ""
   },
   mutations: {
     setCoffeeData(state, data) {
@@ -13,7 +15,13 @@ const images = {
     },
     setBestSellersData(state, data) {
       state.bestSellers = data
-    }
+    },
+    setSearchValue(state, value) {
+      state.searchValue = value
+    },
+    setSortValue(state, value) {
+      state.sortValue = value
+    },
   },
   actions: {
     setCoffeeData({
@@ -30,8 +38,19 @@ const images = {
       commit
     }, data) {
       commit('setBestSellersData', data)
+    },
+    setSearchValue({
+      commit
+    }, value) {
+      commit('setSearchValue', value)
+    },
+    setSortValue({
+      commit
+    }, value) {
+      commit('setSortValue', value)
     }
   },
+
   getters: {
     getBestSellersImage(state) {
       return {
@@ -45,7 +64,10 @@ const images = {
     },
     getСoffeeImage(state) {
       return {
-        coffee: state.coffee,
+        coffee: state.coffee
+          .filter(item => item.name.toLowerCase().includes(state.searchValue.toLowerCase()))
+          .filter(item => item.country.toLowerCase()
+            .includes(state.sortValue.toLowerCase())),
       };
     },
     getCoffeeById(state) {
@@ -57,6 +79,9 @@ const images = {
       return (id) => {
         return state.goods.find((card) => card.id === id)
       }
+    },
+    getSearchValue(state) {
+      return state.searchValue;
     }
   },
 }
