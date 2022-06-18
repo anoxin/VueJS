@@ -65,9 +65,6 @@ const images = {
     getСoffeeImage(state) {
       return {
         coffee: state.coffee
-          .filter(item => item.name.toLowerCase().includes(state.searchValue.toLowerCase()))
-          .filter(item => item.country.toLowerCase()
-            .includes(state.sortValue.toLowerCase())),
       };
     },
     getCoffeeById(state) {
